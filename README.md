@@ -20,3 +20,8 @@ Retrieve the colour of an element
 Use explicit wait
 Use By class 
 Use if-else condition
+iframe
+alerts
+switch
+page objects
+Test annotations
