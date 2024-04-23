@@ -51,6 +51,7 @@ This includes projects with page object classes and tests
 * clickAndHold()
 * release()
 * perform()
+* doubleClick()
 
 # WebDriverWait Class
 
