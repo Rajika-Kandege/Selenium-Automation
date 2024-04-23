@@ -33,11 +33,67 @@ This includes projects with page object classes and tests
 
 * findElement()
 * findElements()
-
+* get()
+* switchTo()
+* frame()
+* getWindowHandles()
+* getCurrentUrl()
+* quit()
+* manage()
+* window()
+* maximize()
+  
 # Actions class
 * click()
 * moveToelement()
+
+# WebDriverWait Class
+
+# Alert interface
+
+* alert()
 * accept()
 * dismiss()
+
+# JavaScriptExecutor interface
+* executeScript()
+
+# WebElement inteface
+* click()
+* sendKeys()
+* getText()
+* activeElement()
+
+# Select class
+* selectByVisibleText()
+
+# By abstract class
+
+* id()
+* xpath()
+* cssSelector()
+* className()
+
+# ExpectedConditions class
+
+* visibilityOfElementLocated()
+* visibilityOf()
+
+# Java
+
+* Access modifiers (public, private)
+* Conditional statements (if-else)
+* List
+* Set
+
+# TestNG
+
+* @Test
+* @BeforeMethod
+* @BeforeTest
+* Assert
+* assertEquals()
+  
+  
 
 
