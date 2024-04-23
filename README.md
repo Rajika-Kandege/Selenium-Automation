@@ -63,6 +63,7 @@ This includes projects with page object classes and tests
 * sendKeys()
 * getText()
 * activeElement()
+* submit()
 
 # Select class
 * selectByVisibleText()
