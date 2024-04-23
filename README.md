@@ -3,16 +3,16 @@ This includes projects with page object classes and tests
 
 # The following areas are covered
 
-Button click
-Actions class usage
-JavaScriptExecutor interface usage
+* Button click
+* Actions class
+JavaScriptExecutor interface 
 Radion button click
 Checkbox select
 Table identification
 Retrieve table data
 TestNG Assertions
 Fluent builder pattern
-Logger class usage
+Logger class 
 Javadoc 
 Inheritance
 Encapsulation
@@ -25,3 +25,5 @@ alerts
 switch
 page objects
 Test annotations
+Enhanced For loop
+
