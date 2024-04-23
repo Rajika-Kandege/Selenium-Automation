@@ -42,10 +42,15 @@ This includes projects with page object classes and tests
 * manage()
 * window()
 * maximize()
+* getTitle()
   
 # Actions class
 * click()
 * moveToelement()
+* dragAndDrop()
+* clickAndHold()
+* release()
+* perform()
 
 # WebDriverWait Class
 
