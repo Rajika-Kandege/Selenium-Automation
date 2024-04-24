@@ -101,6 +101,12 @@ This includes projects with page object classes and tests
 * @BeforeTest
 * Assert
 * assertEquals()
+
+# Exception handling
+
+* NoSuchElementException
+* Exception
+* Custom exceptions
   
   
 
