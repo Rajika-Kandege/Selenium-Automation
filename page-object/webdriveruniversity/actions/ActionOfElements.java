@@ -66,15 +66,20 @@ public class ActionOfElements {
       Actions actions = new Actions(driver);
       actions.dragAndDrop(source, target).perform();
       logger.info("Drag and drop elements");
-    }
-    catch(Exception e){
+    } catch (Exception e) {
       throw new DragAndDropException("Failed to perform the drag and drop due to " + e.getMessage());
     }
     return this;
   }
 
+  /**
+   * a custom exception class named DragAndDropException, which inherits from RuntimeException.
+   * It has a private constructor that accepts a message parameter and passes it to the constructor
+   * of the superclass.
+   */
+
   private class DragAndDropException extends RuntimeException {
-    private  DragAndDropException(String message){
+    private DragAndDropException (String message) {
       super(message);
     }
   }
@@ -92,8 +97,7 @@ public class ActionOfElements {
       WebElement target = driver.findElement(targetElement);
       Actions actions = new Actions(driver);
       actions.clickAndHold(source).moveToElement(target).release().perform();
-    }
-    catch (Exception e){
+    } catch (Exception e) {
       e.printStackTrace();
     }
     ;
@@ -133,18 +137,17 @@ public class ActionOfElements {
    * @throws AWTException
    */
 
-  public ActionOfElements clickOnElement ()   {
+  public ActionOfElements clickOnElement () {
 
-    try{
-    WebElement element = driver.findElement(bottomElement);
-    new ScrollingUpToElement(driver).scrollIntoView(element);
-    Actions actions = new Actions(driver);
-    actions.clickAndHold(element).perform();
-    System.out.println(element.getText());
-    actions.release(element).perform();
-    System.out.println(element.getText());}
-
-    catch (NoSuchElementException e){
+    try {
+      WebElement element = driver.findElement(bottomElement);
+      new ScrollingUpToElement(driver).scrollIntoView(element);
+      Actions actions = new Actions(driver);
+      actions.clickAndHold(element).perform();
+      System.out.println(element.getText());
+      actions.release(element).perform();
+      System.out.println(element.getText());
+    } catch (NoSuchElementException e) {
       e.printStackTrace();
     }
     return this;
