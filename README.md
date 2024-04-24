@@ -43,6 +43,7 @@ This includes projects with page object classes and tests
 * window()
 * maximize()
 * getTitle()
+* getWindowHandle()
   
 # Actions class
 * click()
