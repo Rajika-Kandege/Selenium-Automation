@@ -54,6 +54,7 @@ This includes projects with page object classes and tests
 * doubleClick()
 
 # WebDriverWait Class
+* until()
 
 # Alert interface
 
