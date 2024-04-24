@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.awt.*;
 import java.time.Duration;
+import java.util.NoSuchElementException;
 import java.util.logging.Logger;
 
 public class ActionOfElements {
@@ -58,13 +59,26 @@ public class ActionOfElements {
    * @return ActionOfElements
    */
   public ActionOfElements dragAndDropElements () {
-    WebElement source = driver.findElement(sourceElement);
-    WebElement target = driver.findElement(targetElement);
-    Actions actions = new Actions(driver);
-    actions.dragAndDrop(source, target).perform();
-    logger.info("Drag and drop elements");
+
+    try {
+      WebElement source = driver.findElement(sourceElement);
+      WebElement target = driver.findElement(targetElement);
+      Actions actions = new Actions(driver);
+      actions.dragAndDrop(source, target).perform();
+      logger.info("Drag and drop elements");
+    }
+    catch(Exception e){
+      throw new DragAndDropException("Failed to perform the drag and drop due to " + e.getMessage());
+    }
     return this;
   }
+
+  private class DragAndDropException extends RuntimeException {
+    private  DragAndDropException(String message){
+      super(message);
+    }
+  }
+
 
   /**
    * Drag and drop elements using multiple methods
@@ -72,10 +86,16 @@ public class ActionOfElements {
    * @return ActionOfElements;
    */
   public ActionOfElements dragAndDropWithMultipleMethods () {
-    WebElement source = driver.findElement(sourceElement);
-    WebElement target = driver.findElement(targetElement);
-    Actions actions = new Actions(driver);
-    actions.clickAndHold(source).moveToElement(target).release().perform();
+
+    try {
+      WebElement source = driver.findElement(sourceElement);
+      WebElement target = driver.findElement(targetElement);
+      Actions actions = new Actions(driver);
+      actions.clickAndHold(source).moveToElement(target).release().perform();
+    }
+    catch (Exception e){
+      e.printStackTrace();
+    }
     ;
     logger.info("Drag and drop elements");
     return this;
@@ -113,14 +133,20 @@ public class ActionOfElements {
    * @throws AWTException
    */
 
-  public ActionOfElements clickOnElement () throws AWTException {
+  public ActionOfElements clickOnElement ()   {
+
+    try{
     WebElement element = driver.findElement(bottomElement);
     new ScrollingUpToElement(driver).scrollIntoView(element);
     Actions actions = new Actions(driver);
     actions.clickAndHold(element).perform();
     System.out.println(element.getText());
     actions.release(element).perform();
-    System.out.println(element.getText());
+    System.out.println(element.getText());}
+
+    catch (NoSuchElementException e){
+      e.printStackTrace();
+    }
     return this;
 
   }
