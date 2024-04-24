@@ -87,6 +87,11 @@ This includes projects with page object classes and tests
 * visibilityOfElementLocated()
 * visibilityOf()
 
+# Capabilities
+* getBrowserName()
+* getBrowserVersion()
+* getPlatformName()
+
 # Java
 
 * Access modifiers (public, private)
@@ -101,6 +106,8 @@ This includes projects with page object classes and tests
 * @BeforeTest
 * Assert
 * assertEquals()
+* priority
+* Test case grouping
 
 # Exception handling
 
