@@ -72,6 +72,8 @@ This includes projects with page object classes and tests
 * getText()
 * activeElement()
 * submit()
+* isDisplayed()
+* isEnabled()
 
 # Select class
 * selectByVisibleText()
