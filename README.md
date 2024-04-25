@@ -87,6 +87,13 @@ This includes projects with page object classes and tests
 
 * visibilityOfElementLocated()
 * visibilityOf()
+* textToBePresentInElement()
+* not()
+
+# FluentWait
+* withTimeout()
+* pollingEvery()
+* ignoring()
 
 # Capabilities
 * getBrowserName()
