@@ -14,4 +14,10 @@ public class AccordianTest extends BaseTest {
     accordian.navigateIntoPage().clickManualTestingLink();
 
   }
+
+  @Test
+  public void performTextAppearing(){
+    Accordian accordian  = new Accordian(driver);
+    accordian.navigateIntoPage().waitUntilTextAppears();
+  }
 }
