@@ -74,6 +74,7 @@ This includes projects with page object classes and tests
 * submit()
 * isDisplayed()
 * isEnabled()
+* isSelected()
 
 # Select class
 * selectByVisibleText()
