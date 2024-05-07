@@ -76,6 +76,12 @@ This includes projects with page object classes and tests
 * isEnabled()
 * isSelected()
 
+# Naviagate Interface
+* to()
+* back()
+* forward()
+* refresh()
+
 # Select class
 * selectByVisibleText()
 
